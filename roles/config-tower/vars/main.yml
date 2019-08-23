@@ -6,6 +6,10 @@ scm_url: "{{ github_repo }}"
 proj_name: "Homework Assignment"
 user_name: admin 
 password: r3dh4t1!
+git_name: stevenluke
+git_password: Luke3467!
+git_cred: "Source Control"
+git_cred_desc: "Steve Lucarelli github account"
 ssh_cred_name: "Connect_to_workstation"
 user_cred_name: "cloud-user"
 user_cred_path: "/root/.ssh/openstack.pem"
