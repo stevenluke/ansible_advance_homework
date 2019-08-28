@@ -10,6 +10,9 @@ git_name: stevenluke
 git_password: Luke3467!
 git_cred: "Source Control"
 git_cred_desc: "Steve Lucarelli github account"
+home_project: "Homework Assignment"
+proj_desc: "Homework Assignment Project"
+proj_url: "https://github.com/stevenluke/ansible_advance_homework"
 ssh_cred_name: "Connect_to_workstation"
 user_cred_name: "cloud-user"
 user_cred_path: "/root/.ssh/openstack.pem"

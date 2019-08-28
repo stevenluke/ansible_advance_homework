@@ -2,17 +2,13 @@
   command: |
     tower-cli credential create --name="{{git_name}}" --credential-type "{{git_cred}}" --description "{{git_cred_desc}}" --organization "{{org_name}}" --inputs='{"username":"{{git_name}}","password":"{{git_password}}"}'  --credential-type="{{git_cred}}" --tower-host tower1.{{tower_GUID}}.example.opentlc.com --tower-username {{user_name}} --tower-password {{password}}
 
-- name: Create Project in Tower using above cred 
-  command: |
-    tower-cli project create --name="{{proj_name}}" --description "{{proj_desc}}" --organization "{{org_name}}"  --scm-type git --scm-url {{proj_url}} --tower-host tower1.{{tower_GUID}}.example.opentlc.com --tower-username {{user_name}} --tower-password {{password}}
-
 - name: Job template for OSP Instances
   command: |
     tower-cli job_template create --name "{{job_template_name_osp_instances}}" --job-type run --inventory "{{static_inventory_name}}" --project "{{proj_name}}" --playbook "{{osp_instances_playbook}}" --credential "{{ssh_cred_name}}"
 
 - name: Associate IG to OSP instances job template 
   command: |
-    tower-cli job_template associate_ig --job-template "{{job_template_name_osp_instances}}" --instance-group "{{instance_group_name}}"
+    tower-cli job_template associate_ig --job_template "{{job_template_name_osp_instances}}" --instance_group "{{instance_group_name}}"
 
 
 - name: Create vault credential
@@ -25,7 +21,7 @@
 
 - name: Associate IG to 3tier job template  
   command: |
-    tower-cli job_template associate_ig --job-template "{{job_template_name_3tier_app}}" --instance-group "{{instance_group_name}}"
+    tower-cli job_template associate_ig --job_template "{{job_template_name_3tier_app}}" --instance_group "{{instance_group_name}}"
 
 
 - name: Job template to delete OSP Instances
@@ -34,7 +30,7 @@
 
 - name: Associate IG to OSP Delete instances job template 
   command: |
-    tower-cli job_template associate_ig --job-template "{{job_template_name_osp_instances_delete}}" --instance-group "{{instance_group_name}}"
+    tower-cli job_template associate_ig --job_template "{{job_template_name_osp_instances_delete}}" --instance_group "{{instance_group_name}}"
 
 
 - name: Job template for smoke test osp instances
@@ -43,7 +39,7 @@
 
 - name: Associate IG to Smoke test job template 
   command: |
-    tower-cli job_template associate_ig --job-template "{{job_template_smoke_osp}}" --instance-group "{{instance_group_name}}"
+    tower-cli job_template associate_ig --job_template "{{job_template_smoke_osp}}" --instance_group "{{instance_group_name}}"
 
 - name: Job template for Provisioning AWS env
   command: |
