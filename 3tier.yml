@@ -1,0 +1,16 @@
+---
+
+- hosts: jumpbox
+  gather_facts: true
+  roles:
+  - name: osp-facts
+# Setup front-end load balancer tier
+
+# Setup front-end load balancer tier
+
+
+- name: setup load-balancer tier
+  hosts: frontends
+  roles:
+    - {name: base-config, tags: base-config}
+    - {name: lb-tier, tags: [lbs, haproxy]}

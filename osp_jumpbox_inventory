@@ -1,3 +1,7 @@
 [jumpbox]
 # This is the jumpbox
 workstation-7f27.rhpds.opentlc.com
+
+[workstation]
+# This is the jumpbox
+workstation-7f27.rhpds.opentlc.com
