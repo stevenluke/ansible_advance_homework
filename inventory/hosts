@@ -1,13 +1,13 @@
 [frontends]
-frontend1.7f27.internal ansible_ssh_host=frontend1.7f27.example.opentlc.com
+frontend1.42e6.internal ansible_ssh_host=frontend1.42e6.example.opentlc.com
 
 [apps]
-app1.7f27.internal ansible_ssh_host=app1.7f27.example.opentlc.com
-app2.7f27.internal ansible_ssh_host=app2.7f27.example.opentlc.com
+app1.42e6.internal ansible_ssh_host=app1.42e6.example.opentlc.com
+app2.42e6.internal ansible_ssh_host=app2.42e6.example.opentlc.com
 
 [appdbs]
-appdb1.7f27.internal ansible_ssh_host=appdb1.7f27.example.opentlc.com
+appdb1.42e6.internal ansible_ssh_host=appdb1.42e6.example.opentlc.com
 
 ## These are the support
 [support]
-support1.7f27.internal ansible_ssh_host=support1.7f27.example.opentlc.com
+support1.42e6.internal ansible_ssh_host=support1.42e6.example.opentlc.com
