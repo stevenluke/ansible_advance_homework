@@ -3,7 +3,7 @@
 
 
 - name: setup load-balancer tier
-  hosts: tag_Ansible_Group_frontends
+  hosts: tag_AnsibleGroup_frontends
   become: yes
   gather_facts: false
   roles:
