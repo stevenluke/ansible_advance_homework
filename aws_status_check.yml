@@ -1,4 +1,4 @@
-- hosts: instance_filter=three-tier-app-steve.lucarelli@siriuscom.com
+- hosts: tag:instance_filter=three-tier-app-steve.lucarelli@siriuscom.com
   gather_facts: false
   tasks:
   - name: Check the instances status
